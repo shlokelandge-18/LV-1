@@ -2,201 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>For You 🧸💖</title>
+  <title>LV-1 💗</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <style>
     body {
       margin: 0;
-      min-height: 100vh;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-      font-family: 'Segoe UI', sans-serif;
-      color: #fff;
+      font-family: Arial, sans-serif;
+      color: white;
       text-align: center;
-      overflow-x: hidden;
-      padding: 30px 10px;
     }
-
     h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.7;
-    }
-
-    .container {
-      background: rgba(255,255,255,0.22);
-      padding: 30px;
-      border-radius: 30px;
-      max-width: 500px;
-      margin: 0 auto;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-      position: relative;
-    }
-
-    /* Peeking teddies */
-    .peek-left, .peek-right {
-      position: fixed;
-      top: 40%;
-      width: 120px;
-      z-index: 1;
-      opacity: 0.9;
-    }
-
-    .peek-left {
-      left: -40px;
-    }
-
-    .peek-right {
-      right: -40px;
-      transform: scaleX(-1);
-    }
-
-    /* Main teddy */
-    .big-teddy {
-      width: 180px;
-      margin: 20px auto;
-    }
-
-    .items {
-      position: relative;
-      height: 260px;
-      margin-top: 20px;
-    }
-
-    .item {
-      position: absolute;
       font-size: 40px;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-
-    .item:hover {
-      transform: scale(1.2);
-    }
-
-    .counter {
-      margin-top: 15px;
-      font-size: 16px;
-      opacity: 0.9;
-    }
-
-    .love-text {
-      display: none;
-      margin-top: 30px;
-      animation: fadeIn 1.5s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .sorry {
-      margin-top: 25px;
-      font-size: 16px;
-      opacity: 0.85;
-    }
-
-    .heart {
-      position: fixed;
-      font-size: 18px;
-      animation: float 7s linear infinite;
-      opacity: 0.6;
-      pointer-events: none;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(100vh); }
-      100% { transform: translateY(-10vh); }
     }
   </style>
 </head>
 <body>
-
-  <!-- Peeking Teddies -->
-  <img class="peek-left" src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif">
-  <img class="peek-right" src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif">
-
-  <div class="container">
-    <h1>Hey Aditi 🧸💗</h1>
-
-    <!-- Big Teddy -->
-    <img class="big-teddy" src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif">
-
-    <p>
-      I hid a few tiny things here…  
-      Find all of them 🫶  
-      (They’re cute. Like you.)
-    </p>
-
-    <div class="items">
-      <div class="item" style="top:20px; left:30px" onclick="found(this)">🍫</div>
-      <div class="item" style="top:100px; right:40px" onclick="found(this)">🧸</div>
-      <div class="item" style="top:40px; left:180px" onclick="found(this)">🌸</div>
-      <div class="item" style="bottom:30px; left:90px" onclick="found(this)">💌</div>
-      <div class="item" style="bottom:50px; right:100px" onclick="found(this)">⭐</div>
-    </div>
-
-    <div class="counter">
-      Found <span id="count">0</span> / 5 little things ✨
-    </div>
-
-    <div class="love-text" id="loveText">
-      <p>
-        Now that you’ve found everything, I guess there’s nothing left to hide.
-        I love you in a way that feels playful and deep at the same time —
-        in the laughter, in the calm, and in the moments where we don’t even say much.
-      </p>
-
-      <p>
-        Loving you feels natural. It feels warm. It feels like choosing you
-        every day without forcing it. You make my heart softer just by being you,
-        and I carry that feeling with me more than you probably realize.
-      </p>
-
-      <p>
-        If love could be wrapped in small things — a chocolate, a teddy,
-        a silly little game — it would still always mean *you* to me.
-      </p>
-
-      <div class="sorry">
-        <p>
-          And if I’ve ever hurt you, intentionally or not, I’m truly sorry.  
-          I’m still learning, but my care for you has always been real 🤍
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    let foundCount = 0;
-
-    function found(el) {
-      el.style.display = "none";
-      foundCount++;
-      document.getElementById("count").innerText = foundCount;
-
-      if (foundCount === 5) {
-        document.getElementById("loveText").style.display = "block";
-      }
-    }
-
-    // floating hearts
-    setInterval(() => {
-      const heart = document.createElement("div");
-      heart.className = "heart";
-      heart.innerHTML = "💗";
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.fontSize = Math.random() * 18 + 14 + "px";
-      document.body.appendChild(heart);
-
-      setTimeout(() => heart.remove(), 7000);
-    }, 600);
-  </script>
-
+  <h1>🧸 LV-1 is LIVE 💗</h1>
 </body>
 </html>
